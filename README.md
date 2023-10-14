@@ -7,3 +7,4 @@ Key Features:
 - Red border for empty or invalid fields.
 - Blue border for focusing any input.
 - Ensures required fields are filled.
+
