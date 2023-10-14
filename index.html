@@ -22,36 +22,69 @@
             <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
             <p class="p2">You <i>know</i> you want to.</p>
         </div>
-        <form action="#" method="post">
+        
+        <form id="signupForm" action="/" method="post">
             <legend>Let's do this!</legend>
             <div class="form-container">
                 <div>
                     <label for="user_firstname">FIRST NAME</label>
-                    <input type="text" id="user_firstname" name="first-name" placeholder="Farhan" required>
+                    <input
+                        type="text"
+                        id="user_firstname"
+                        name="first-name"
+                        placeholder="Farhan" 
+                        required>
                 </div>
                 <div>
                     <label for="user_lastname">LAST NAME</label>
-                    <input type="text" id="user_lastname" name="last-name" placeholder="Mantab" required>
+                    <input
+                        type="text"
+                        id="user_lastname"
+                        name="last-name"
+                        placeholder="Mantabul"
+                        required>
                 </div>
                 <div>
                     <label for="user_email">EMAIL</label>
-                    <input type="email" id="user_email" name="email" placeholder="abcd@efg.com" required>
+                    <input
+                        type="email"
+                        id="user_email"
+                        name="email"
+                        placeholder="mantan@example.com"
+                        required>
                 </div>
                 <div>
                     <label for="user_phonenum">PHONE NUMBER</label>
-                    <input type="tel" id="user_phonenum" name="phone-no" placeholder="#" required>
+                    <input
+                        type="tel"
+                        id="user_phonenum"
+                        name="phone-no"
+                        placeholder="012-345 6789"
+                        pattern="[0-9]{3}-[0-9]{3} [0-9]{4}"
+                        required>
                 </div>
                 <div>
                     <label for="user_pw">PASSWORD</label>
-                    <input type="password" id="user_pw" name="password" required>
+                    <input
+                        type="password"
+                        id="user_pw" name="password"
+                        placeholder=""
+                        required>
+                        <div id="error-pw"></div>
                 </div>
                 <div>
                     <label for="user_confirmpw">CONFIRM PASSWORD</label>
-                    <input type="password" id="user_confirmpw" name="confirm-password" required>
+                    <input
+                        type="password"
+                        id="user_confirmpw"
+                        name="confirm-password"
+                        placeholder=""
+                        required>
+                        <div id="error-cpw"></div>
                 </div>
             </div>
         </form>
-        <button>Create Account</button>
+        <button type="submit" form="signupForm">Create Account</button>
         <p class="login-text">Already have an account? <a href="#">Log in</a></p>
     </div>
 
