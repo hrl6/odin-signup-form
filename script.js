@@ -16,20 +16,31 @@ form.addEventListener(`submit`, (e) => {
     let messagescpw = [];
 
     if(password.value.length <= 7){
-        messagespw.push(`Password must be at least 8 characters`);
+        messagespw.push(`*Password must be at least 8 characters`);
         errorPW.innerText = messagespw;
+        password.classList.add(`red-border`);
     } else{
         errorPW.innerText = '';
+        password.classList.remove(`red-border`);
     }
 
     if(confirmPassword.value != password.value){
-        messagescpw.push(`Password not match`);
+        messagescpw.push(`*Password not match`);
         errorCPW.innerText = messagescpw;
+        confirmPassword.classList.add(`red-border`);
     } else{
         errorCPW.innerText = '';
+        confirmPassword.classList.remove(`red-border`);
     }
 
     if(messages.length > 0){
         e.preventDefault(); // prevent submission
     }
+});
+
+password.addEventListener(`click`, () => {
+    password.removeAttribute(`placeholder`);
+})
+confirmPassword.addEventListener(`click`, () => {
+    confirmPassword.removeAttribute(`placeholder`);
 })
