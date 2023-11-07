@@ -8,3 +8,4 @@ Key Features:
 - Blue border for focusing any input.
 - Ensures required fields are filled.
 
+View: https://hrulm.github.io/odin-signup-form/
